@@ -6,3 +6,4 @@ description      'Installs/Configures godoc'
 long_description 'Installs/Configures godoc'
 version          '0.1.0'
 
+depends 'golang'

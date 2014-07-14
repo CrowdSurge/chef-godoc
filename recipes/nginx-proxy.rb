@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: godoc
-# Recipe:: default
+# Recipe:: nginx-proxy
 #
 # Copyright (C) 2014 Will Salt
 #
@@ -17,4 +17,4 @@
 # limitations under the License.
 #
 
-include_recipe "golang::default"
+include_recipe "nginx::default"
