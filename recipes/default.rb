@@ -18,3 +18,4 @@
 #
 
 include_recipe "golang::default"
+include_recipe "runit::default"
