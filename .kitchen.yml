@@ -17,4 +17,5 @@ suites:
       - recipe[godoc]
     attributes: 
       godoc:
-        nginx-proxy: true
+        nginx:
+          proxy: true

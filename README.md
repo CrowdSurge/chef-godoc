@@ -16,22 +16,28 @@ This cookbook installs Godoc, manages the http server process, and optionally pr
     <th>Default</th>
   </tr>
   <tr>
+    <td><tt>['godoc']['user']</tt></td>
+    <td>Boolean</td>
+    <td>The user runit will run the godoc httpd with</td>
+    <td><tt>godoc</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['godoc']['home']</tt></td>
+    <td>Boolean</td>
+    <td>The home directory the godoc user will use</td>
+    <td><tt>node['go']['gopath']/godoc</tt></td>
+  </tr>
+  <tr>
     <td><tt>['godoc']['nginx']['proxy']</tt></td>
     <td>Boolean</td>
     <td>whether to include nginx recipe to proxy the local server</td>
     <td><tt>false</tt></td>
   </tr>
   <tr>
-    <td><tt>['godoc']['nginx']['path']</tt></td>
-    <td>String</td>
-    <td>The path that godoc should serve on</td>
-    <td><tt>/docs/godoc</tt></td>
-  </tr>
-  <tr>
     <td><tt>['godoc']['nginx']['site']</tt></td>
     <td>String</td>
     <td>The server name to serve on</td>
-    <td><tt>node['fqdn']</tt></td>
+    <td><tt>godoc.node['domain']</tt></td>
   </tr>
 </table>
 

@@ -20,7 +20,7 @@
 include_recipe "golang::default"
 include_recipe "runit::default"
 
-if node['godoc']['nginx-proxy']
+if node['godoc']['nginx']['proxy']
   include_recipe "godoc::nginx-proxy"
 end
 

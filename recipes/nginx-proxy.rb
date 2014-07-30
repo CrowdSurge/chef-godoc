@@ -25,7 +25,7 @@ template "/etc/nginx/sites-available/godoc" do
   group "root"
   mode "0644"
   variables({
-    :host => node["godoc"]["servername"],
+    :host => node["godoc"]["nginx"]["site"],
   })
 end
 
