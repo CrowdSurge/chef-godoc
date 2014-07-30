@@ -15,3 +15,6 @@ suites:
   - name: nginx_proxy
     run_list:
       - recipe[godoc]
+    attributes: 
+      godoc:
+        nginx-proxy: true
