@@ -19,3 +19,17 @@
 
 include_recipe "golang::default"
 include_recipe "runit::default"
+
+user node["godoc"]["user"] do
+  action :create
+  comment "Godoc User"
+  home node["godoc"]["home"]
+  shell "/bin/bash"
+  supports :manage_home => true
+end
+
+runit_service "godoc" do
+  options({
+    :user => node["godoc"]["user"]
+  })
+end
