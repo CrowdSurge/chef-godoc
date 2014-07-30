@@ -18,3 +18,15 @@
 #
 
 include_recipe "nginx::default"
+
+template "/etc/nginx/sites-available/godoc" do
+  source "godoc.erb"
+  owner "root"
+  group "root"
+  mode "0644"
+  variables({
+    :host => node["godoc"]["servername"],
+  })
+end
+
+nginx_site "godoc"
