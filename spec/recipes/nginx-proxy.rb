@@ -19,7 +19,7 @@ describe 'godoc::nginx-proxy' do
   context 'when the servername attribute is passed use it with nginx' do
     let(:chef_run) do
       ChefSpec::Runner.new do |node|
-        node.set["godoc"]["servername"] = 'godoc.custom'
+        node.set["godoc"]["nginx"]["site"] = 'godoc.custom'
       end.converge(described_recipe)
     end
     it 'will install the godoc nginx template' do
