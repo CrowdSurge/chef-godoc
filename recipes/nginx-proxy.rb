@@ -27,6 +27,7 @@ template "/etc/nginx/sites-available/godoc" do
   variables({
     :host => node["godoc"]["nginx"]["site"],
   })
+  notifies :reload, "service[nginx]"
 end
 
 nginx_site "godoc"
