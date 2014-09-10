@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+export GOPATH=<%=node['go']['gopath']%>
+export GOBIN=<%=node['go']['gobin']%>
 
 exec 2>&1
 exec chpst -u <%= @options[:user] %> /usr/local/go/bin/godoc --http=:9200 -index=true
