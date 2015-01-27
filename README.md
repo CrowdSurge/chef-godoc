@@ -1,5 +1,7 @@
 # godoc-cookbook
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CrowdSurge/chef-godoc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This cookbook installs Godoc, manages the http server process, and optionally proxies a path to the local port with nginx
 
 ## Supported Platforms
